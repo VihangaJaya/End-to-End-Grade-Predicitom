@@ -1,5 +1,7 @@
 import os
 import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
@@ -12,6 +14,8 @@ from src.components.data_transformation import DataTransformationConfig
 
 from src.components.model_trainer import ModelTrainerConfig
 from src.components.model_trainer import ModelTrainer
+
+
 @dataclass
 class DataIngestionConfig:
     train_data_path: str=os.path.join('artifacts',"train.csv")
